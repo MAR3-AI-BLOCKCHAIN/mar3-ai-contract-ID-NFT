@@ -1,0 +1,53 @@
+{
+  "name": "Mar3AI-Smart-contracts",
+  "version": "0.0.1",
+  "author": "Hao Mai <maihao1997@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "start:dev": "hardhat node",
+    "migrate:local": "hardhat run --network localhost scripts/migrate-bep20.js",
+    "migrate:testnet": "hardhat run --network testnet scripts/migrate-mar3-key.js",
+    "migrate-mar3ID:testnet": "hardhat run --network testnet scripts/migrate-bep721.js",
+    "migrate-mar3ID:base-goerli": "hardhat run --network base-goerli scripts/migrate-image-nft.js",
+    "migrate-mar3Key:base-goerli": "hardhat run --network base-goerli scripts/migrate-mar3-key.js",
+    "migrate-mar3Key:opbnb": "hardhat run --network opbnb scripts/migrate-mar3-key.js",
+    "migrate-mar3Image:testnet": "hardhat run --network testnet scripts/migrate-image-nft.js",
+    "migrate:mainnet": "hardhat run --network mainnet scripts/migrate-mar3-key.js",
+    "migrate-mar3ID:mainnet": "hardhat run --network mainnet scripts/migrate-bep721.js",
+    "migrate-mar3Image:mainnet": "hardhat run --network mainnet scripts/migrate-image-nft.js",
+    "migrate-721:mainnet": "hardhat run --network mainnet scripts/migrate-bep721.js",
+    "migrate-mar3:testnet": "hardhat run --network testnet scripts/migrate-bep20.js",
+    "migrate-mar3:mainnet": "hardhat run --network mainnet scripts/migrate-bep20.js",
+    "migrate-mar3-staking:testnet": "hardhat run --network testnet scripts/migrate-mar3-staking.js",
+    "verify:testnet": "hardhat verify --network testnet --contract contracts/bep20/Mar3.sol:Mar3 0x1b171a9e8941a01e64b8d27b3d9de71a51c0c01b",
+    "verify:mainnet": "hardhat verify --network mainnet --contract contracts/bep20/Mar3.sol:Mar3 0x9D44C04ef10Cbd4ba321E51A54F1354d0799fEEF",
+    "verify:base-goerli": "hardhat verify --network base-goerli --constructor-args scripts/arguments.js 0xEA8fd320216b7d6603874403d0fdc5FEBBb29a49",
+    "verify:opbnb": "hardhat verify --network opbnb --constructor-args scripts/arguments.js 0xd701a737178bB7a22982e6Be832592b6718047c8"
+  },
+  "dependencies": {
+    "@ethersproject/hardware-wallets": "^5.5.0",
+    "@ledgerhq/hw-app-eth": "^6.26.0",
+    "@ledgerhq/hw-transport-node-hid": "^6.24.1",
+    "@matterlabs/hardhat-zksync-deploy": "^0.6.2",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.14",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.2",
+    "@openzeppelin/hardhat-upgrades": "^1.15.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.6",
+    "csvtojson": "^2.0.10",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.9.1",
+    "web3": "^1.7.1"
+  },
+  "devDependencies": {
+    "@matterlabs/hardhat-zksync-verify": "^0.1.3"
+  }
+}

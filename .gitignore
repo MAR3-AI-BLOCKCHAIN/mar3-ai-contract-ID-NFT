@@ -1,0 +1,12 @@
+node_modules
+.openzeppelin
+artifacts
+artifacts-zk
+cache
+cache-zk
+csv
+
+*.log
+.DS_Store
+yarn.lock
+env.json
